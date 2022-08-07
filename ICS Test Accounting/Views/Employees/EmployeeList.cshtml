@@ -1,0 +1,83 @@
+﻿@model ICS_Test_Accounting.Models.AllModels
+@{
+	var employeeList = Model.employeeList;
+	ViewData["Title"] = "Employee List";
+}
+
+
+
+<h1>@ViewData["Title"]</h1>
+
+
+<div style="margin-top:15px;margin-bottom:5px;">
+	@using (Html.BeginForm("AddingPage", "Employees", FormMethod.Post, htmlAttributes: new
+	{ style = "display:inline-block" }))
+	{
+		<button class="btn btn-outline-info btn-sm" 
+		style="width:250px;margin-right:5px;border-width:1px" 
+		type="submit">Добавить</button>
+	}
+	@using (Html.BeginForm("Filter", "Employees", FormMethod.Post, htmlAttributes: new
+	{ style = "" }))
+	{
+		<input list="posts" name="post" type="text" class="btn btn-outline-primary btn-sm" 
+		style="width:162px;color:blue;margin-top:10px;border-width:1px" 
+		placeholder="Должность"
+		onmouseover="this.style.backgroundColor='transparent'"  autocomplete="off">
+		<datalist id="posts">
+			@foreach (var post in Model.GetPosts())
+			{
+				<option value="@post"></option>
+			}
+		</datalist>
+		<button type="submit" class="btn btn-outline-primary btn-sm"
+		style="color:blue;margin-top:10px;border-width:1px"
+		onmouseover="this.style.backgroundColor='transparent'">Фильтр&#128269;</button>
+	}
+
+</div>
+<table class="table">
+	<thead>
+		<tr>
+			<th style="width:17%;display:table-cell">@Html.ActionLink("Имя","EmployeeList","Employees",null, new {@class="nav-link text-dark",style="padding:0"})</th>
+			<th style="width:18%;display:table-cell">@Html.ActionLink("Фамилия","EmployeeList","Employees",null, new {@class="nav-link text-dark",style="padding:0"})</th>
+			<th style="width:12%;display:table-cell">@Html.ActionLink("Должность","EmployeeList","Employees",null, new {@class="nav-link text-dark",style="padding:0"})</th>
+			<th style="width:13%;display:table-cell">@Html.ActionLink("Дата рождения","EmployeeList","Employees",null, new {@class="nav-link text-dark",style="padding:0"})</th>
+			<th style="width:5% ;display:table-cell">@Html.ActionLink("Зарплата","EmployeeList","Employees",null, new {@class="nav-link text-dark",style="padding:0"})</th>
+			<th style="width:35%;display:table-cellcolor:gray;text-align:center">Действия</th>
+		</tr>
+	</thead>
+	<tbody>
+		@{
+			
+			if (employeeList!=null && employeeList.Count>0)
+			{
+				foreach (var employee in employeeList)
+				{
+					<tr>
+						<td>@employee.Name</td>
+						<td>@employee.Surname</td>
+						<td>@employee.Post</td>
+						<td>@employee.BirthDate.ToShortDateString()</td>
+						<td>@employee.Salary</td>
+						<td align="center" style="text-align:center;">
+							<div style="display:inline-block;width:100%">
+								@using (Html.BeginForm("Delete", "Employees", FormMethod.Post,htmlAttributes: new 
+								{onSubmit="return confirm('Вы действительно хотите удалить запись?');",
+								style="display:inline-block;margin-right:2px"}))
+								{
+									<button class="btn btn-outline-primary btn-sm" type="submit" name="id" value="@employee.ID">Удалить</button>
+								}
+								@using (Html.BeginForm("EditingPage", "Employees",new {id=employee.ID} ,FormMethod.Post,null,new 
+								{style="display:inline-block;margin-right:2px"}))
+								{
+									<button class="btn btn-outline-primary btn-sm" type="submit" name="id" value="@employee.ID">Редактировать</button>
+								}
+							</div>
+						</td>
+					</tr>
+				}
+			}
+			}
+	</tbody>
+</table>

@@ -1,0 +1,39 @@
+﻿@model ICS_Test_Accounting.Models.Employee
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+  
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+</style>
+
+
+@using(Html.BeginForm("Edit","Employees",FormMethod.Post, htmlAttributes: new { onSubmit = "return confirm('Вы действительно хотите изменить эту запись?');" }))
+{
+    <div>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px;">Имя:</label>
+            <input name="Name" min="2" required style="width:190px" type="text" pattern="^[а-яА-ЯёЁ]+$" value="@Model.Name"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Фамилия:</label>
+            <input name="Surname" min="3" required style="width:190px" type="text" pattern="^[а-яА-ЯёЁ]+$" value="@Model.Surname"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Должность:</label>
+            <input name="Post" min="4" required style="width:190px" type="text" pattern="^[а-яА-ЯёЁ]+$" value="@Model.Post"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Дата рождения:</label>
+            <input name="BirthDate" required style="width:190px" type="date" value="@Model.BirthDate.ToString("yyyy-MM-dd")"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Зарплата:</label>
+            <input name="Salary" required style="width:190px" type="number" min="100" max="10000" value="@Model.Salary"><br>
+    </div>
+
+    <input type="hidden" name="id" value="@Model.ID">
+    <button class="btn btn-outline-primary btn-sm" style="width:325px" type="submit" name="employee" value="@Model">Изменить</button>
+}

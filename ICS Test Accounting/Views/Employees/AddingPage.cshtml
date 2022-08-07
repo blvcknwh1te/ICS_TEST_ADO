@@ -1,0 +1,39 @@
+﻿@model ICS_Test_Accounting.Models.AllModels
+@{
+	var employeeList = Model.employeeList;
+    ViewData["Title"] = "Add Employee";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+
+<style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+  
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+</style>
+@using(Html.BeginForm("Add","Employees",FormMethod.Post,htmlAttributes: new { onSubmit = "return confirm('Добавить эту запись?');" }))
+{
+    <div>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px;">Имя:</label>
+            <input name="Name" min="2" required style="width:190px" type="text" pattern="^[а-яА-ЯёЁ]+$"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Фамилия:</label>
+            <input name="Surname" min="3" required style="width:190px" type="text" pattern="^[а-яА-ЯёЁ]+$"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Должность:</label>
+            <input name="Post" min="4" required style="width:190px" type="text" pattern="^[а-яА-ЯёЁ]+$"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Дата рождения:</label>
+            <input name="BirthDate" required style="width:190px" type="date"><br>
+        <label style="margin-right:10px;margin-bottom:10px;width:120px">Зарплата:</label>
+            <input name="Salary" required style="width:190px" type="number" min="100" max="10000"><br>
+    </div>
+   
+
+    <button class="btn btn-outline-primary btn-sm" style="width:325px" type="submit">Добавить</button>
+}
