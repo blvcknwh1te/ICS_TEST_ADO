@@ -1,0 +1,40 @@
+networks:
+  icsdriver: {}
+services:
+  icsdb:
+    container_name: ics-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: simplepassword
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      icsdriver: {}
+    ports:
+    - published: 8002
+      target: 1433
+  icstestaccountingado:
+    build:
+      context: E:\Work\ICS Test\ICS Test Accounting ADO
+      dockerfile: ICS Test Accounting/Dockerfile
+    container_name: ics-ado
+    depends_on:
+      icsdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_HOST: icsdb
+      DB_NAME: AccountingICS_ADO
+      DB_SA_PASSWORD: simplepassword
+    image: icstestaccountingado
+    networks:
+      icsdriver: {}
+    ports:
+    - published: 8001
+      target: 80
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\vlade\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\vlade\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

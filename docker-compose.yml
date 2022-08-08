@@ -1,0 +1,33 @@
+version: '3.4'
+
+networks:
+  icsdriver:
+    
+
+services:
+  icsdb:
+    container_name: ics-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+        - 8002:1433
+    environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=ktzu37pS
+    networks:
+        - icsdriver
+  icstestaccountingado:
+    container_name: ics-ado
+    image: ${DOCKER_REGISTRY-}icstestaccountingado
+    build:
+      context: .
+      dockerfile: ICS Test Accounting/Dockerfile
+    ports:
+      - 8001:80
+    depends_on: 
+      - icsdb
+    environment:
+      - DB_HOST=icsdb
+      - DB_NAME=AccountingICS_ADO
+      - DB_SA_PASSWORD=ktzu37pS
+    networks:
+      - icsdriver

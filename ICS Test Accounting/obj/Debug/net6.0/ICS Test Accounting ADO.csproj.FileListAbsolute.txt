@@ -243,3 +243,15 @@ E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\obj\Debug\net6.0\re
 E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\obj\Debug\net6.0\ICS Test Accounting ADO.pdb
 E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\obj\Debug\net6.0\ICS Test Accounting ADO.genruntimeconfig.cache
 E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\obj\Debug\net6.0\ref\ICS Test Accounting ADO.dll
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\css\site.css
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\js\site.js
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\jquery\dist\jquery.js
+E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting\bin\Debug\net6.0\wwwroot\lib\jquery\dist\jquery.min.js

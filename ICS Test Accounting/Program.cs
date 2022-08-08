@@ -5,9 +5,17 @@ using System.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
-DbUtility.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-DbUtility.ConnectionStringNoDb = builder.Configuration.GetConnectionString("DefaultConnectionNoDb");
-DbUtility.DbName = new SqlConnectionStringBuilder(DbUtility.ConnectionString)["Initial Catalog"].ToString();
+//DbUtility.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
+
+
+
+DbUtility.ConnectionString = $"Server={dbHost};Database={dbName};User ID=sa;Password={dbPassword}"; 
+DbUtility.ConnectionStringNoDb = $"Server={dbHost};User ID=sa;Password={dbPassword}";
+DbUtility.DbName = new SqlConnectionStringBuilder(DbUtility.ConnectionString)["Database"].ToString();
 
 
 

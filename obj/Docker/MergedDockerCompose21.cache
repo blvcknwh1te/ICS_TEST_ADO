@@ -1,0 +1,60 @@
+networks:
+  icsdriver: {}
+services:
+  icsdb:
+    container_name: ics-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ktzu37pS
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      icsdriver: {}
+    ports:
+    - published: 8002
+      target: 1433
+  icstestaccountingado:
+    build:
+      context: E:\Work\ICS Test\ICS Test Accounting ADO
+      dockerfile: ICS Test Accounting/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: ICS Test Accounting ADO
+      target: base
+    container_name: ics-ado
+    depends_on:
+      icsdb:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_HOST: icsdb
+      DB_NAME: AccountingICS_ADO
+      DB_SA_PASSWORD: simplepassword
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: icstestaccountingado:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/ICS
+        Test Accounting ADO.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      icsdriver: {}
+    ports:
+    - published: 8001
+      target: 80
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - E:\Work\ICS Test\ICS Test Accounting ADO\ICS Test Accounting:/app:rw
+    - C:\Users\vlade\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\vlade\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\vlade\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\vlade\.nuget\packages:/root/.nuget/packages:ro
+    - E:\Work\ICS Test\ICS Test Accounting ADO:/src:rw
+version: '3.4'

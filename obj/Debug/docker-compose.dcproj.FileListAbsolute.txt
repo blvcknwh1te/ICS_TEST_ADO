@@ -1,0 +1,24 @@
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\ICS Test Accounting ADO.deps.json
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\ICS Test Accounting ADO.runtimeconfig.json
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\css\site.css
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\js\site.js
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\jquery\dist\jquery.js
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\wwwroot\lib\jquery\dist\jquery.min.js
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\appsettings.Development.json
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\appsettings.json
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\ICS Test Accounting ADO.staticwebassets.runtime.json
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\ICS Test Accounting ADO.exe
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\ICS Test Accounting ADO.dll
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\System.Data.SqlClient.dll
+E:\Work\ICS Test\ICS Test Accounting ADO\bin\Debug\ICS Test Accounting ADO.pdb
+E:\Work\ICS Test\ICS Test Accounting ADO\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+E:\Work\ICS Test\ICS Test Accounting ADO\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+E:\Work\ICS Test\ICS Test Accounting ADO\obj\Debug\docker-compose.dcproj.CopyComplete

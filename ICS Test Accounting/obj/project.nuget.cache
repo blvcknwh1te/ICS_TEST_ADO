@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "svZUw1ykP/JPXWZRWsOtCBLotikM/9mPlQhNp+fIX5r4B/khTqoGUSsrKukaiBLkGPYZfhYdtkX4ji2DWCewIg==",
+  "dgSpecHash": "4nYoi/QjNO+8rufF4hGiLh+TyRj/QyuuOYf+DqDkmkbQSU4Bc8ncJWmQNP2Ti86OaYaPtlV5d+H4243IyJT8hA==",
   "success": true,
   "projectFilePath": "E:\\Work\\ICS Test\\ICS Test Accounting ADO\\ICS Test Accounting\\ICS Test Accounting ADO.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\vlade\\.nuget\\packages\\microsoft.net.stringtools\\1.0.0\\microsoft.net.stringtools.1.0.0.nupkg.sha512",
     "C:\\Users\\vlade\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\vlade\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
+    "C:\\Users\\vlade\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\vlade\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\vlade\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.7\\microsoft.visualstudio.web.codegeneration.6.0.7.nupkg.sha512",
     "C:\\Users\\vlade\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.7\\microsoft.visualstudio.web.codegeneration.core.6.0.7.nupkg.sha512",

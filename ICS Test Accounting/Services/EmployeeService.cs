@@ -26,7 +26,7 @@ namespace ICS_Test_Accounting.Services
         public EmployeeService(IConfiguration configuration)
         {
             _configuration = configuration;
-            connectionString = _configuration.GetConnectionString("DefaultConnection");
+            connectionString = DbUtility.ConnectionString;
 
         }
 
